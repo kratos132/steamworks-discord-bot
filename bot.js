@@ -51,5 +51,4 @@ client.on("message", async message => {
   }
   
 });
-
 client.login(config.token);
