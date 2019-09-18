@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const links = require("./links.json");
 
-client.login(config.token);
 
 client.on("ready", () => {
   console.log(`Bot foi iniciado, com ${client.users.size} usuários, em ${client.channels.size} canais, em ${client.guilds.size} servidores.`); 
@@ -51,5 +50,7 @@ client.on("message", async message => {
 
   }
   
+  client.login(config.token);
+
 });
 
