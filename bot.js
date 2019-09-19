@@ -42,14 +42,10 @@ client.on("message", async message => {
       if(links.sites[i].nome.startsWith(args2)){
 
         resultados.push(links.sites[i].link)
-        /*await message.author.send(links.sites[i].nome);
+        await message.author.send(links.sites[i].nome);
         resposta = await message.author.send(links.sites[i].link);
-        if(resposta == links.sites[i].link) return;*/
-        for(var ii = 0; ii<= resultados.length; ii++){
-
-          await message.author.send(resultados(ii));
-
-        }
+        console.log(resultados(resultados.length));
+        if(resposta == links.sites[i].link) return;
 
       }
 
