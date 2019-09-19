@@ -35,16 +35,16 @@ client.on("message", async message => {
 
     args2 = JSON.stringify(args).replace('[', '').replace(']', '').replace(/"/g, ''). replace(/,/g ," ");
 
-    console.log(args2)
+    //console.log(args2)
 
     for(var i = 0; i <= links.sites.length; i++){
 
       if(links.sites[i].nome.startsWith(args2)){
 
-        resultados.push(links.sites[i].link)
+        resultados.push(links.sites[i].nome)
         await message.author.send(links.sites[i].nome);
         resposta = await message.author.send(links.sites[i].link);
-        console.log(resultados[resultados.length]);
+        console.log("resultados: " + resultados[resultados.length]);
         if(resposta == links.sites[i].link) return;
 
       }
