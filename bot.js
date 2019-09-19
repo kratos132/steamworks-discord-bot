@@ -31,7 +31,7 @@ client.on("message", async message => {
 
     //const m = await message.channel.send("Testando 1, 2, 3")
 
-    const resultados = [];
+    var resultados = [];
 
     args2 = JSON.stringify(args).replace('[', '').replace(']', '').replace(/"/g, ''). replace(/,/g ," ");
 
