@@ -6,7 +6,7 @@ const links = require("./links.json");
 
 client.on("ready", () => {
   console.log(`Bot foi iniciado, com ${client.users.size} usuários, em ${client.channels.size} canais, em ${client.guilds.size} servidores.`); 
-  client.user.setPresence({game: {name: 'testando 5', url: 'http://www.twitch.tv/retro_gaming_show', type: 1}});
+  client.user.setPresence({game: {name: 'diversao a todos', url: 'http://www.twitch.tv/retro_gaming_show', type: 1}});
     //0 = Jogando
     //  1 = Transmitindo
     //  2 = Ouvindo
