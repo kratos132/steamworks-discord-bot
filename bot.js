@@ -44,7 +44,7 @@ client.on("message", async message => {
         resultados.push(links.sites[i].link)
         await message.author.send(links.sites[i].nome);
         resposta = await message.author.send(links.sites[i].link);
-        console.log(tostring(resultados(resultados.length)));
+        console.log(toString(resultados(resultados.length)));
         if(resposta == links.sites[i].link) return;
 
       }
