@@ -39,7 +39,7 @@ client.on("message", async message => {
       
       if(links.sites[i].nome.startsWith(args2)){
         await message.author.send(links.sites[i].nome);
-        resposta = await message.author.send(links.sites[i].nome);
+        resposta = await message.author.send(links.sites[i].link);
         if(resposta == links.sites[i].nome) return;
 
       }
