@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const links = require("./links.json");
 
-
 client.on("ready", () => {
   console.log(`Bot foi iniciado, com ${client.users.size} usuários, em ${client.channels.size} canais, em ${client.guilds.size} servidores.`); 
   client.user.setPresence({game: {name: 'meu prefixo ++', url: 'http://www.twitch.tv/retro_gaming_show', type: 1}});
@@ -32,6 +31,8 @@ client.on("message", async message => {
 
     //const m = await message.channel.send("Testando 1, 2, 3")
 
+    const resultados = [];
+
     args2 = JSON.stringify(args).replace('[', '').replace(']', '').replace(/"/g, ''). replace(/,/g ," ");
 
     console.log(args2)
@@ -40,9 +41,15 @@ client.on("message", async message => {
 
       if(links.sites[i].nome.startsWith(args2)){
 
-        await message.author.send(links.sites[i].nome);
+        resultados.push(links.sites[i].link)
+        /*await message.author.send(links.sites[i].nome);
         resposta = await message.author.send(links.sites[i].link);
-        if(resposta == links.sites[i].link) return;
+        if(resposta == links.sites[i].link) return;*/
+        for(var ii = 0; ii<= resultados.length; ii++){
+
+          await message.author.send(resultados(ii));
+
+        }
 
       }
 
