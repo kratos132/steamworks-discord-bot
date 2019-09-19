@@ -30,7 +30,7 @@ client.on("message", async message => {
 
   if(comando == "procurar"){
 
-    const m = await message.channel.send("Testando 1, 2, 3")
+    //const m = await message.channel.send("Testando 1, 2, 3")
     
     args2 = JSON.stringify(args).replace('[', '').replace(']', '').replace(/"/g, ''). replace(/,/g ," ");
 
